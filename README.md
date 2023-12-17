@@ -1,1 +1,1 @@
-![](https://github.com/cookies-manager-react/GIF.gif)
+![]([https://github.com/hamza-eljaouhari/cookies-manager-react/blob/main/GIF.gif)
