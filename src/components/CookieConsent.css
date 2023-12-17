@@ -1,0 +1,169 @@
+/* Base styling for the cookie consent container */
+.cookie-consent-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 500px;
+    background: #fff;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    font-family: 'Arial', sans-serif;
+    z-index: 1000; /* Ensure it's above other content */
+    animation: fadeIn 0.5s;
+}
+
+.cookie-consent-choices .select-all-section {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+
+.cookie-consent-content h2, p, .cookie-consent-choices h2, p {
+    text-align: left;
+    padding: 10px 30px;
+}
+
+@keyframes fadeIn {
+    from { transform: translateY(-50px) translateX(-50%); opacity: 0; }
+    to { transform: translateY(0) translateX(-50%); opacity: 1; }
+}
+
+.cookie-options {
+    background-color: rgba(234, 221, 145, 0.35);
+    width: 80%;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.25);
+
+    margin: 10px auto 30px auto;
+    border-radius: 4px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cookie-options .cookie-option {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Style for the header area */
+.cookie-consent-container h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styling */
+.cookie-consent-container p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Button styling */
+.cookie-consent-container .cookie-consent-buttons {
+    display: flex;
+}
+
+.cookie-consent-container .cookie-consent-buttons button {
+    flex: 1;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #000; /* default color, override below */
+}
+
+.cookie-consent-container .cookie-consent-buttons button:last-child {
+    margin-right: 0;
+}
+
+.cookie-consent-container .cookie-consent-buttons button:nth-child(1) {
+    background-color: #ccc;
+}
+
+.cookie-consent-container .cookie-consent-buttons button:nth-child(2) {
+    background-color: #ffd700; /* yellow button */
+}
+
+.cookie-consent-container .cookie-consent-buttons button:nth-child(3) {
+    background-color: #000; /* black button */
+}
+
+/* Certification text styling */
+.cookie-consent-container .cookie-consent-certification {
+    font-size: 12px;
+    color: #888;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cookie-consent-container .cookie-consent-certification strong {
+    font-weight: bold;
+}
+
+/* Toggle switch styling */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    margin-left: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #ffd700;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Adjust the fade-out animation */
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
